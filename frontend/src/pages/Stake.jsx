@@ -71,10 +71,10 @@ const Stake = () => {
       await staking(amount, indexDuration);
       setLoading(false);
       setAmount('')
-      showNotification('success', `Successfully staked ${amountNumber} BNB.`);
+      showNotification('success', `Successfully staked ${amountNumber} VinaSwap.`);
     } catch (error) {
       console.error(error);
-      showNotification('error', "An error occurred while staking. Please make sure you have enough BNB and URA.");
+      showNotification('error', "An error occurred while staking. Please make sure you have enough VinaSwap and URA.");
       setLoading(false);
     }
   };
@@ -172,7 +172,7 @@ const Stake = () => {
                   <span className="text-left font-bold">{getBonusPercentage(duration)}%</span>
                 </div>
                 <div className="flex flex-col p-1 items-center justify-center h-18 bg-box border border-[#131313] rounded-lg">
-                  <span className="text-left text-[12px] font-medium leading-3 p-2 pb-0">BNB Balance:</span>
+                  <span className="text-left text-[12px] font-medium leading-3 p-2 pb-0">VinaSwap Balance:</span>
                   <span className="text-left font-bold">{balance ? `${Number(balance).toFixed(0)} VinaSwap` : 'Loading...'}</span>
                 </div>
               </div>
